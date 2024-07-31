@@ -21,6 +21,7 @@ venv
 docs.zip
 archive.zip
 .env
+nohup.out
 
 # vim temporary files
 *~
