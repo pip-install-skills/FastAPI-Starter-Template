@@ -2,7 +2,3 @@ fastapi
 python-dotenv
 pytest
 uvicorn
-python-jose
-passlib
-python-multipart
-bcrypt
