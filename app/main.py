@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.middleware.logging_middleware import LoggingMiddleware
+
 app = FastAPI(
     title="Template",
     swagger_ui_parameters={"syntaxHighlight": False}
@@ -14,7 +16,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
+app.add_middleware(LoggingMiddleware)
 
 @app.get("/")
 async def root():
