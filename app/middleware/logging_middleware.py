@@ -31,6 +31,9 @@ class LoggingMiddleware(BaseHTTPMiddleware):
 
         process_time = time.time() - start_time
 
+        # Add X-Process-Time header to the response
+        response.headers["X-Process-Time"] = f"{process_time:.2f} seconds"
+
         client_ip = request.client.host
 
         # Log the request details
