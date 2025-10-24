@@ -1,6 +1,0 @@
-fastapi
-python-dotenv
-pytest
-uvicorn
-python-multipart
-toml
