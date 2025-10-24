@@ -5,6 +5,7 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
 COPY --from=ghcr.io/astral-sh/uv:latest /uvx /bin/uvx
 
 # Set the working directory
+# Set the working directory
 WORKDIR /app
 
 # Copy dependency files early for better caching
